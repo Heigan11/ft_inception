@@ -2,3 +2,43 @@
     https://docs.docker.com/engine/install/ubuntu/
 2. Устанавливаем Docker compose:
     https://docs.docker.com/compose/install/
+3. Подготавливаем структуру проекта:
+    - Makefile
+    - src dir
+    - .env
+    - docker-compose.yml
+4. Настройка Nginx 
+    - Создаем директорию nginx
+    - Dockerfile:
+
+    FROM debian:buster - по заданию
+
+    LABEL maintainer="Jraye" - для красоты
+
+    RUN apt update && \
+	apt upgrade -y && \
+	apt install -y nano nginx - установка диструбьютивов
+
+    - копируем nginx.conf из ft_server
+
+    - делаем скрипт для запуска start_nginx.sh
+
+        https://nginx.org/ru/docs/beginners_guide.html
+
+5. Настройка Wordpress
+    - Создаем делаем wordpress
+
+    https://www.php.net/manual/ru/install.fpm.php
+
+5. Настройка MariaDB
+    - Создаем делаем mariadb
+
+
+
+
+sudo docker-compose -f srcs/docker-compose.yml build
+sudo docker-compose -f srcs/docker-compose.yml up -d
+
+sudo docker-compose -f srcs/docker-compose.yml down
+
+sudo docker-compose -f srcs/docker-compose.yml ps
