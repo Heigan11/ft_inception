@@ -1,0 +1,4 @@
+1. Устанавливаем Docker для Ubuntu:
+    https://docs.docker.com/engine/install/ubuntu/
+2. Устанавливаем Docker compose:
+    https://docs.docker.com/compose/install/
